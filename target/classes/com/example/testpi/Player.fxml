@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testpi.PlayerController">
+   <top>
+      <Pane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #039BE5;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#fffefe" layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Players">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="360.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutX="26.0" layoutY="38.0" prefHeight="199.0" prefWidth="548.0">
+              <columns>
+                <TableColumn fx:id="playerNameCol" prefWidth="90.0" text="Player Name" />
+                <TableColumn fx:id="playerPositionCol" prefWidth="103.0" text="Player Position" />
+                  <TableColumn fx:id="playerClubCol" prefWidth="43.0" text="Club" />
+                  <TableColumn fx:id="playerNumberCol" prefWidth="100.0" text="Player Number" />
+                  <TableColumn fx:id="playerDominantFootCol" prefWidth="92.0" text="Dominant Foot" />
+                  <TableColumn fx:id="playerAgeCol" minWidth="8.0" prefWidth="38.0" text="Age" />
+                  <TableColumn fx:id="playerRating" prefWidth="81.0" text="Player Rating" />
+              </columns>
+            </TableView>
+            <TextField fx:id="addPlayerName" layoutX="36.0" layoutY="264.0" promptText="Player Name" />
+            <TextField fx:id="AddPlayerRating" layoutX="554.0" layoutY="264.0" promptText="Player Rating" />
+            <TextField fx:id="addPlayerAge" layoutX="388.0" layoutY="297.0" promptText="Age" />
+            <TextField fx:id="addPlayerPosition" layoutX="36.0" layoutY="297.0" promptText="Player Position" />
+            <TextField fx:id="addPlayerDominantFoot" layoutX="388.0" layoutY="264.0" promptText="Dominant Foot" />
+            <TextField fx:id="addPlayerNumber" layoutX="215.0" layoutY="297.0" promptText="Player Number" />
+            <TextField fx:id="addPlayerClub" layoutX="215.0" layoutY="264.0" promptText="Player Club" />
+            <Button fx:id="addPlayer" layoutX="593.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#handleButtonAddPlayer" text="AddPlayer" />
+            <Text fill="#1d88d3" layoutX="36.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Player :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
